@@ -1,0 +1,48 @@
+# dependencies
+node_modules
+
+# production build
+dist
+build
+
+# env files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# runtime
+.pnp
+.pnp.js
+
+# coverage
+coverage
+
+# editor / IDE
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# system files
+Thumbs.db
+
+# vite cache
+.vite
+
+# optional cache
+.cache
+.parcel-cache
+
+# testing
+jest-cache
