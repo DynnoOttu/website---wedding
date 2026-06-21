@@ -10,9 +10,9 @@ export const GROOM = {
 export const BRIDE = {
   name: "Winda Irniwati Ottu",
   shortName: "Winda",
-  childOrder: 2,
-  siblings: 4,
-  father: "Hironimus J Ottu",
+  childOrder: "dua",
+  siblings: "empat",
+  father: "Hironimus J. Ottu, S.H.",
   mother: "Norma Anita Frans",
 };
 
@@ -24,7 +24,8 @@ export const EVENTS = [
     day: "Selasa",
     date: "30 Juni 2026",
     time: "16.00 WITA — Selesai",
-    place: "Rumah Bapak Hironimus J Ottu",
+    place: "Rumah Bapak Hironimus J. Ottu, S.H.",
+    maps: "https://maps.app.goo.gl/YtPPvU5SpNuDt6DP6",
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export const EVENTS = [
     date: "02 Juli 2026",
     time: "14.00 WITA",
     place: "GMIT Pniel Manutapen",
+    maps: "https://maps.app.goo.gl/W15ZXrGCeEQWGHu17",
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ export const EVENTS = [
     date: "02 Juli 2026",
     time: "17.00 WITA — Selesai",
     place: "GMIT Pniel Manutapen",
+    maps: "https://maps.app.goo.gl/W15ZXrGCeEQWGHu17",
   },
 ];
 
@@ -50,18 +53,18 @@ export const FAMILIES = {
   groom: [
     "Keluarga Besar Missa",
     "Keluarga Besar Nifu",
-    "Keluarga Besar Bapak Artahsasta A E Nifu",
+    "Keluarga Besar Bapak Pdt. Artahsasta A. E. Nifu, S.Th M.M.",
   ],
   bride: [
     "Keluarga Besar Ottu",
     "Keluarga Besar Frans",
-    "Keluarga Besar Imanuel J M Nanggi Ang",
+    "Keluarga Besar Imanuel J.M Nanggi Ang, S.T.",
   ],
 };
 
 export const WITNESSES = [
-  { id: 1, roman: "I", name: "Artahsasta A E Nifu" },
-  { id: 2, roman: "II", name: "Imanuel J M Nanggi Ang" },
+  { id: 1, roman: "I", name: "Pdt. Artahsasta A. E. Nifu, S.Th M.M." },
+  { id: 2, roman: "II", name: "Imanuel J.M Nanggi Ang, S.T." },
 ];
 
 export const BIBLE_VERSE = {

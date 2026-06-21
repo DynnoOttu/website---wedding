@@ -128,9 +128,8 @@ export default function CoupleSection() {
                     className="font-montserrat font-light mt-1 leading-[1.8]"
                     style={{ fontSize: 10, color: "#c9a880" }}
                   >
-                    Putri ke-{BRIDE.childOrder} dari {BRIDE.siblings} bersaudara
-                    <br />
-                    Kel. Ottu &amp; Frans
+                    Anak ke {BRIDE.childOrder} dari {BRIDE.siblings} bersaudara
+                    pasangan Bapak {BRIDE.father} &amp; Ibu {BRIDE.mother}
                   </p>
                 </div>
               </div>
