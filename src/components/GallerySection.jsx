@@ -6,31 +6,37 @@ import { GALLERY } from "../data/weddingData";
 
 export default function GallerySection() {
   const swiperEl = useRef(null);
+  const swiperInstance = useRef(null);
 
   useEffect(() => {
-    let sw = null;
-    const init = () => {
-      if (!window.Swiper || !swiperEl.current) return;
-      sw = new window.Swiper(swiperEl.current, {
+    if (!swiperEl.current) return;
+
+    const timer = setTimeout(() => {
+      swiperInstance.current = new window.Swiper(swiperEl.current, {
         slidesPerView: "auto",
         spaceBetween: 14,
         centeredSlides: true,
         loop: true,
-        autoplay: { delay: 2600, disableOnInteraction: false },
-        pagination: { el: ".swiper-pagination", clickable: true },
+        speed: 600,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
         grabCursor: true,
       });
-    };
-    if (window.Swiper) {
-      init();
-    } else {
-      const s = document.createElement("script");
-      s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
-      s.onload = init;
-      document.head.appendChild(s);
-    }
+    }, 300);
+
     return () => {
-      if (sw) sw.destroy(true, true);
+      clearTimeout(timer);
+      if (swiperInstance.current) {
+        swiperInstance.current.destroy(true, true);
+        swiperInstance.current = null;
+      }
     };
   }, []);
 
@@ -43,7 +49,6 @@ export default function GallerySection() {
           background: "linear-gradient(180deg,#0e0a0c,#161010,#0e0a0c)",
         }}
       >
-        {/* White glow top & bottom */}
         <div
           className="absolute top-0 left-0 right-0 pointer-events-none"
           style={{
@@ -67,8 +72,7 @@ export default function GallerySection() {
           </SectionReveal>
         </div>
 
-        {/* Swiper */}
-        <div ref={swiperEl} className="swiper px-0">
+        <div ref={swiperEl} className="swiper px-0 pb-2">
           <div className="swiper-wrapper">
             {GALLERY.map((photo) => (
               <div key={photo.id} className="swiper-slide !w-[210px]">
@@ -84,6 +88,7 @@ export default function GallerySection() {
                     alt={photo.caption}
                     className="w-full h-full object-cover"
                     loading="lazy"
+                    draggable={false}
                   />
                   <div
                     className="absolute inset-0"
@@ -102,8 +107,9 @@ export default function GallerySection() {
               </div>
             ))}
           </div>
-          <div className="swiper-pagination mt-2" />
+          <div className="swiper-pagination mt-4" />
         </div>
+
         <div className="pb-8" />
       </section>
       <VineDivider flip />

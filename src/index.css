@@ -3,22 +3,36 @@
 @tailwind utilities;
 
 @layer base {
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background: #0e0a0c;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
   }
 }
 
 @layer components {
   /* ── Swiper ── */
-  .swiper { width: 100%; padding-bottom: 40px !important; }
-  .swiper-slide { width: 210px !important; border-radius: 18px; overflow: hidden; }
+  .swiper {
+    width: 100%;
+    padding-bottom: 40px !important;
+  }
+  .swiper-slide {
+    width: 210px !important;
+    border-radius: 18px;
+    overflow: hidden;
+  }
   .swiper-pagination-bullet {
-    background: rgba(255,255,255,0.2) !important;
-    width: 8px !important; height: 8px !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    width: 8px !important;
+    height: 8px !important;
     transition: all 0.3s;
   }
   .swiper-pagination-bullet-active {
@@ -31,12 +45,23 @@
   .reveal {
     opacity: 0;
     transform: translateY(38px);
-    transition: opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.10s; }
-  .reveal-delay-2 { transition-delay: 0.22s; }
-  .reveal-delay-3 { transition-delay: 0.34s; }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 {
+    transition-delay: 0.1s;
+  }
+  .reveal-delay-2 {
+    transition-delay: 0.22s;
+  }
+  .reveal-delay-3 {
+    transition-delay: 0.34s;
+  }
 
   /* ── Falling petals ── */
   .petal {
@@ -45,74 +70,164 @@
     z-index: 6;
     animation: petalFall linear infinite;
   }
-  .petal-inner { border-radius: 50% 0 50% 0; }
+  .petal-inner {
+    border-radius: 50% 0 50% 0;
+  }
   @keyframes petalFall {
-    0%   { transform: translateY(-50px) rotate(0deg);   opacity: 0; }
-    8%   { opacity: 1; }
-    92%  { opacity: 0.5; }
-    100% { transform: translateY(105vh) rotate(380deg); opacity: 0; }
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    92% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(105vh) rotate(380deg);
+      opacity: 0;
+    }
   }
 
   /* ── SVG flower petal sway ── */
-  .flower-sway { animation: flowerSway ease-in-out infinite alternate; }
+  .flower-sway {
+    animation: flowerSway ease-in-out infinite alternate;
+  }
   @keyframes flowerSway {
-    from { transform: rotate(-5deg) scale(1); }
-    to   { transform: rotate(5deg)  scale(1.04); }
+    from {
+      transform: rotate(-5deg) scale(1);
+    }
+    to {
+      transform: rotate(5deg) scale(1.04);
+    }
   }
 
   /* ── Hero bg slow zoom ── */
-  .hero-zoom { animation: heroZoom 22s ease-in-out infinite alternate; }
+  .hero-zoom {
+    animation: heroZoom 22s ease-in-out infinite alternate;
+  }
   @keyframes heroZoom {
-    from { transform: scale(1); }
-    to   { transform: scale(1.09); }
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.09);
+    }
   }
 
   /* ── Hero text staggered ── */
-  .hero-anim-0 { opacity: 0; animation: heroFadeUp 1s ease 0.2s forwards; }
-  .hero-anim-1 { opacity: 0; animation: heroFadeUp 1s ease 0.5s forwards; }
-  .hero-anim-2 { opacity: 0; animation: heroFadeUp 1s ease 0.8s forwards; }
-  .hero-anim-3 { opacity: 0; animation: heroFadeUp 1s ease 1.0s forwards; }
-  .hero-anim-4 { opacity: 0; animation: heroFadeUp 1s ease 1.3s forwards; }
-  .hero-anim-5 { opacity: 0; animation: heroFadeUp 1s ease 1.6s forwards; }
+  .hero-anim-0 {
+    opacity: 0;
+    animation: heroFadeUp 1s ease 0.2s forwards;
+  }
+  .hero-anim-1 {
+    opacity: 0;
+    animation: heroFadeUp 1s ease 0.5s forwards;
+  }
+  .hero-anim-2 {
+    opacity: 0;
+    animation: heroFadeUp 1s ease 0.8s forwards;
+  }
+  .hero-anim-3 {
+    opacity: 0;
+    animation: heroFadeUp 1s ease 1s forwards;
+  }
+  .hero-anim-4 {
+    opacity: 0;
+    animation: heroFadeUp 1s ease 1.3s forwards;
+  }
+  .hero-anim-5 {
+    opacity: 0;
+    animation: heroFadeUp 1s ease 1.6s forwards;
+  }
   @keyframes heroFadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* ── EQ bars ── */
   .eq-bar {
-    width: 3px; border-radius: 2px;
+    width: 3px;
+    border-radius: 2px;
     background: linear-gradient(180deg, #fff8f0, #c9956b);
     transform-origin: bottom;
     animation: eqAnim 0.65s ease-in-out infinite alternate;
   }
-  .eq-bar:nth-child(1) { height: 6px;  animation-delay: 0s; }
-  .eq-bar:nth-child(2) { height: 13px; animation-delay: .10s; }
-  .eq-bar:nth-child(3) { height: 9px;  animation-delay: .20s; }
-  .eq-bar:nth-child(4) { height: 15px; animation-delay: .06s; }
-  .eq-bar:nth-child(5) { height: 7px;  animation-delay: .16s; }
-  @keyframes eqAnim { to { transform: scaleY(0.18); } }
+  .eq-bar:nth-child(1) {
+    height: 6px;
+    animation-delay: 0s;
+  }
+  .eq-bar:nth-child(2) {
+    height: 13px;
+    animation-delay: 0.1s;
+  }
+  .eq-bar:nth-child(3) {
+    height: 9px;
+    animation-delay: 0.2s;
+  }
+  .eq-bar:nth-child(4) {
+    height: 15px;
+    animation-delay: 0.06s;
+  }
+  .eq-bar:nth-child(5) {
+    height: 7px;
+    animation-delay: 0.16s;
+  }
+  @keyframes eqAnim {
+    to {
+      transform: scaleY(0.18);
+    }
+  }
 
   /* ── Dark glass card ── */
   .card-dark {
-    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
-    border: 1px solid rgba(255,255,255,0.09);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 18px;
     position: relative;
     overflow: hidden;
   }
   .card-dark::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
     pointer-events: none;
   }
 
   /* ── Event card left accent ── */
   .ev-accent::after {
-    content: '';
-    position: absolute; top: 0; left: 0; bottom: 0; width: 2px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.5), #c9956b, rgba(255,255,255,0.1));
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5),
+      #c9956b,
+      rgba(255, 255, 255, 0.1)
+    );
     border-radius: 2px 0 0 2px;
   }
 
@@ -139,16 +254,50 @@
   /* ── Wish inputs ── */
   .wish-input {
     width: 100%;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 11px 14px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 13px;
     color: #f0e0d0;
     outline: none;
     transition: border-color 0.2s;
   }
-  .wish-input:focus { border-color: rgba(255,255,255,0.30); }
-  .wish-input::placeholder { color: #5a4a40; }
+  .wish-input:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .wish-input::placeholder {
+    color: #5a4a40;
+  }
+}
+
+.swiper-slide {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  will-change: transform;
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.swiper-slide img {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.swiper-slide {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  will-change: transform;
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.swiper-slide img {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
