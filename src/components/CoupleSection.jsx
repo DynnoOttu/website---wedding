@@ -58,7 +58,7 @@ export default function CoupleSection() {
 
           {/* Couple cards */}
           <SectionReveal delay={150} className="reveal-delay-2">
-            <div className="grid grid-cols-2 gap-3 mt-6">
+            <div className="grid grid-cols-1 gap-3 mt-6">
               {/* Groom */}
               <div
                 className="relative rounded-[18px] overflow-hidden aspect-[3/4]"

@@ -17,10 +17,10 @@ export default function App() {
         {!entered && <EnvelopeSplash onEnter={() => setEntered(true)} />}
         <MusicBar autoPlay={entered} />
         <HeroSection />
-        <GallerySection />
         <CoupleSection />
         <EventsSection />
         <FamilySection />
+        <GallerySection />
         <WishesSection />
         <FooterSection />
       </div>

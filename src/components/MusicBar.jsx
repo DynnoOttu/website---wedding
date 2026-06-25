@@ -44,7 +44,7 @@ export default function MusicBar({ autoPlay }) {
         playsInline
         loop
         preload="auto"
-        src="https://res.cloudinary.com/dzs9aijqab/video/upload/v1760281381/Nothing_s_Gonna_Change_My_Love_for_You_George_Benson_-_saxophone_cover_epeebt.mp3"
+        src="https://res.cloudinary.com/dzs9aijqab/video/upload/v1782403183/wedding%20-%20winda/elvis-presley-can-t-help-falling-in-love-music-travel-love-cover_P3ptXlvs_2_ur86qp.mp3"
       />
       <div className="flex items-center gap-3">
         <div className="flex items-end gap-[3px] h-[14px]">
@@ -67,7 +67,7 @@ export default function MusicBar({ autoPlay }) {
             fontFamily: "Montserrat",
           }}
         >
-          Wedding - Yebes &amp; Winda
+          Wedding - Yabes &amp; Winda
         </span>
       </div>
       <button
