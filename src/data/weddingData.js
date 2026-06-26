@@ -53,12 +53,12 @@ export const FAMILIES = {
   groom: [
     "Keluarga Besar Missa",
     "Keluarga Besar Nifu",
-    "Keluarga Besar Bapak Pdt. Artahsasta A. E. Nifu, S.Th M.M.",
+    "Keluarga Bapak Pdt. Artahsasta A. E. Nifu, S.Th M.M.",
   ],
   bride: [
     "Keluarga Besar Ottu",
     "Keluarga Besar Frans",
-    "Keluarga Besar Imanuel J.M Nanggi Ang, S.T.",
+    "Keluarga Imanuel J.M Nanggi Ang, S.T.",
   ],
 };
 

@@ -131,7 +131,7 @@ export default function EnvelopeSplash({ onEnter }) {
         <div className={`card-inside ${opened ? "show" : ""}`}>
           <p className="c-sub">you are invited to</p>
           <div className="c-div" />
-          <p className="c-names">Yebes &amp; Winda</p>
+          <p className="c-names">Yabes &amp; Winda</p>
           <div className="c-div" />
           <p className="c-sub">wedding celebration</p>
         </div>
@@ -141,7 +141,7 @@ export default function EnvelopeSplash({ onEnter }) {
         <div className={`wax-seal ${opened ? "hide" : ""}`}>💍</div>
       </div>
 
-      <p className="names-out">Yebes &amp; Winda</p>
+      <p className="names-out">Yabes &amp; Winda</p>
       <div className="divider-gold">
         <span>✦</span>
       </div>
