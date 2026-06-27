@@ -58,7 +58,7 @@ export const FAMILIES = {
   bride: [
     "Keluarga Besar Ottu",
     "Keluarga Besar Frans",
-    "Keluarga Imanuel J.M Nanggi Ang, S.T.",
+    "Keluarga Bapak Imanuel J.M Nanggi Ang, S.T.",
   ],
 };
 
